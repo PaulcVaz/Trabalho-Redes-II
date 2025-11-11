@@ -151,7 +151,7 @@
 
         <section class="abstract">
             <h2>Abstract</h2>
-            <p>Este trabalho apresenta uma análise crítica dos Sistemas de Detecção de Intrusão (IDS) tradicionais, argumentando que suas arquiteturas centralizadas e métodos de detecção (baseados em assinatura ou anomalia) são inadequados para o cenário moderno de ameaças cibernéticas. A tese central é que uma defesa eficaz exige uma nova abordagem baseada na síntese de duas tecnologias: Sistemas Multiagente (SMA) e Inteligência Artificial (IA) Generativa.</p>
+            <p>Este trabalho apresenta uma análise crítica dos Sistemas de Detecção de Intrusão (IDS) tradicionais, argumentando que suas arquiteturas centralizadas e métodos de detecção (baseados em assinatura ou anomalia) podem ser inadequados para o cenário futuro de ameaças cibernéticas. A tese central é que uma defesa eficaz exige uma nova abordagem baseada na síntese de duas tecnologias: Sistemas Multiagente (SMA) e Inteligência Artificial (IA) Generativa para criar um sistema mutável e capaz de aprender com os atacantes.</p>
         </section>
 
         <section class="keywords">
@@ -171,7 +171,7 @@
             
             <p>O cenário de ameaças digitais contemporâneo é caracterizado por uma escalada sem precedentes em volume, velocidade e sofisticação de ataques cibernéticos. Atores maliciosos, desde grupos de crime organizado até entidades patrocinadas por estados, empregam táticas cada vez mais avançadas, incluindo malwares polimórficos e campanhas de ataque multifásicas projetadas para contornar os Sistemas de Detecção de Intrusão (IDS) tradicionais. Neste ambiente dinâmico e hostil, os mecanismos de segurança estáticos, que formaram a base da cibersegurança por décadas, estão se tornando progressivamente inadequados.</p>
 
-            <p>Os IDS convencionais, em particular, enfrentam limitações fundamentais. Os sistemas baseados em assinaturas são incapazes de identificar ameaças newas e desconhecidas, enquanto os sistemas baseados em anomalias, embora mais adaptáveis, são frequentemente assolados por altas taxas de falsos positivos, levando à "fadiga de alertas" entre os analistas de segurança e tornando-os operacionalmente insustentáveis. Além disso, a arquitetura centralizada da maioria dos IDS tradicionais enfrenta desafios significativos de escalabilidade em redes modernas, que são cada vez mais distribuídas, complexas e heterogêneas.</p>
+            <p>Os IDS convencionais, em particular, enfrentam limitações fundamentais. Os sistemas baseados em assinaturas são incapazes de identificar ameaças novas e desconhecidas, enquanto os sistemas baseados em anomalias, embora mais adaptáveis, são frequentemente assolados por altas taxas de falsos positivos, levando à "fadiga de alertas" entre os analistas de segurança e tornando-os operacionalmente insustentáveis. Além disso, a arquitetura centralizada da maioria dos IDS tradicionais enfrenta desafios significativos de escalabilidade em redes modernas, que são cada vez mais distribuídas, complexas e heterogêneas.</p>
 
             <p>Este trabalho apresenta a tese de que a síntese de duas tecnologias representa uma mudança de paradigma na segurança de redes: Sistemas Multiagente (SMA) e Inteligência Artificial (IA) Generativa. Esta abordagem integrada oferece um caminho para a criação de sistemas de defesa descentralizados, adaptativos, colaborativos e proativos, capazes de superar as deficiências das gerações anteriores de IDS.</p>
 
@@ -185,6 +185,21 @@
 
             <p>Um Sistema de Detecção de Intrusão é uma ferramenta de segurança, seja um dispositivo de hardware ou uma aplicação de software, que monitora continuamente as atividades de uma rede ou sistema em busca de ações maliciosas ou violações de políticas de segurança. Diferentemente de um Sistema de Prevenção de Intrusão (IPS), que pode tomar medidas ativas para bloquear ameaças, um IDS funciona principalmente como uma ferramenta de visibilidade. Sua função é análoga a um alarme de incêndio: ele detecta um incidente potencial e notifica os administradores do sistema, que então devem tomar as medidas apropriadas. Os objetivos primários de um IDS são garantir os três pilares da segurança da informação, a confidencialidade, integridade e disponibilidade, ao detectar ataques que visam comprometer esses princípios fundamentais.</p>
 
+            <h3>1.3. Sistemas de Detecção de Intrusão Atuais</h3>
+
+<p>O cenário de software para detecção de intrusão no ambiente corporativo é marcado por uma clara evolução dos Sistemas de Detecção de Intrusão (IDS) tradicionais para plataformas modernas de Detecção e Resposta de Rede (NDR). Essa transição foi motivada pela incapacidade dos métodos anteriores, baseados puramente em assinaturas, de detectar ameaças novas ou de dia-zero. Consequentemente, as soluções de NDR adotam a análise comportamental e a inteligência artificial (IA) como seus pilares centrais para identificar ataques desconhecidos e avançados.[1, 2]</p>
+
+<p>No entanto, as ferramentas fundamentais, muitas das quais são de código aberto, ainda formam a base de muitas arquiteturas de segurança. Ferramentas como <strong>Snort</strong> e seu sucessor multithreaded, <strong>Suricata</strong>, continuam sendo os padrões para NIDS baseados em assinaturas, realizando análise de tráfego em tempo real contra conjuntos de regras conhecidas.
+    
+Paralelamente, <strong>Zeek</strong> (anteriormente Bro) representa uma abordagem distinta, focando menos em assinaturas e mais na geração de logs de eventos de rede de alta fidelidade (como conexões HTTP, consultas DNS e logins FTP) para análise comportamental e forense subsequente.
+    
+Na esfera de detecção baseada em host (HIDS), o <strong>OSSEC</strong> é amplamente utilizado para monitoramento de integridade de arquivos, verificação de configuração e análise de logs diretamente nos servidores e estações de trabalho.</p>
+
+<p>Contudo, o mercado corporativo migrou predominantemente para plataformas de NDR que empregam IA para automação. A <strong>Darktrace</strong>, por exemplo, é notória por sua "IA de Autoaprendizagem" (*Self-Learning AI*), que modela o comportamento normal de cada dispositivo e usuário na rede para detectar desvios sutis que indicam uma ameaça, sem depender de regras pré-definidas.
+    
+Similarmente, a <strong>Vectra AI</strong> utiliza IA para priorizar e correlacionar diferentes comportamentos de ataque (como movimento lateral e abuso de privilégios) em uma única narrativa, reduzindo o ruído de alertas para as equipes de segurança. Essas plataformas exemplificam a aplicação prática dos conceitos de detecção por anomalia em larga escala, e sua evolução para XDR (Detecção e Resposta Estendidas), como o <strong>Cortex XDR</strong> da Palo Alto Networks, integra dados da rede, endpoints e nuvem para uma visão de segurança unificada.</p>
+
+            
             <h4>Modelos Baseados em Rede, Host e Híbridos</h4>
 
             <p>A eficácia de um IDS depende de seu posicionamento e escopo de monitoramento, o que leva a várias arquiteturas distintas:</p>
