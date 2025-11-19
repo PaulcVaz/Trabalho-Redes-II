@@ -240,7 +240,25 @@
 
             <ul>
                 <li><strong>Sistema de Detecção de Intrusão de Rede (NIDS)</strong>: é implantado em pontos estratégicos de uma rede, como em uma sub-rede crítica ou logo atrás do firewall, para monitorar todo o tráfego que flui dele para os dispositivos nesse segmento. Ao analisar os cabeçalhos e o conteúdo dos pacotes em tempo real, um NIDS oferece uma visão ampla da atividade da rede e pode detectar ameaças rapidamente. No entanto, essa ampla varredura pode, por vezes, levar a um maior número de falsos positivos.</li>
+
+                <figure>
+                <img src="nids.png" alt=" Esquema de funcionamento de um nids " style="width:100%; max-width:700px; height:auto; display:block; margin:auto;">
+                <figcaption style="text-align:center; margin-top:8px; font-style:italic;">
+                  Diagrama de funcionamento de um Sistema de Detecção de Intrusão de Rede (Fonte: https://www.geeksforgeeks.org/difference-between-hids-and-nids/)
+                </figcaption>
+                </figure>
+                
+                
                 <li><strong>Sistema de Detecção de Intrusão de Host (HIDS)</strong>: um HIDS é instalado em terminais individuais (hosts), como servidores ou estações de trabalho. Ele monitora as atividades internas do host, como modificações em arquivos de sistema, logs de eventos, chamadas de sistema e comportamento do usuário. Embora mais intensivo em recursos, um HIDS pode detectar ameaças que um NIDS não conseguiria ver, como um usuário autorizado realizando atividades maliciosas ou um ataque que se origina de dentro do próprio host.</li>
+
+                <figure>
+                <img src="hids.png" alt=" Esquema de funcionamento de um HIDS." style="width:100%; max-width:700px; height:auto; display:block; margin:auto;">
+                <figcaption style="text-align:center; margin-top:8px; font-style:italic;">
+                  Diagrama de funcionamento de um Sistema de Detecção de Intrusão de Host (Fonte: https://www.geeksforgeeks.org/difference-between-hids-and-nids/)
+                </figcaption>
+                </figure>
+                
+                
                 <li><strong>Sistema de Detecção de Intrusão de Nó de Rede (NNIDS)</strong>: é uma variação do NIDS que se aplica a um único host por vez, proporcionando um monitoramento de rede mais focado em comparação com a abordagem de sub-rede inteira de um NIDS tradicional.</li>
                 <li><strong>Sistemas Híbridos</strong>: Dado que NIDS e HIDS possuem capacidades complementares, um focado na rede e o outro no host, muitas organizações implementam soluções híbridas que combinam ambos os tipos para obter uma cobertura de segurança abrangente e em camadas.</li>
             </ul>
